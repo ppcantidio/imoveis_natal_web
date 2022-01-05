@@ -1,3 +1,4 @@
+import re
 import requests
 from app import app
 from werkzeug.utils import redirect
@@ -6,11 +7,49 @@ from flask import Blueprint, render_template, make_response, request
 
 public_routes = Blueprint('imoveis_routes', __name__)
 
+def api(endpoint):
+    return f'http://127.0.0.1:5000/api/{endpoint}'
+
 
 @public_routes.route('/index', methods=['GET'])
-def login():
+def index(): 
+    response = requests.get(url=api('/imoveis/busca'), params={'categoria': 'venda'})
+    response = response.json()
 
-    return render_template('index.html')
+    imoveis = response['imoveis']
+
+    bairros = ['Ponta Negra', 'Petropolis', 'Tirol']
+
+    cont = 0
+    for imovel in imoveis:
+        corretor_id = imovel['corretor_id']
+        response_corretor = requests.get(url=api(f'usuarios/info/{corretor_id}'))
+        response_corretor = response_corretor.json()
+
+        corretor = response_corretor['corretor']
+        imovel['corretor_nome'] = corretor['nome']
+
+        valor = '{0:,}'.format(imoveis[cont]['valor'])
+        imoveis[cont]['valor'] = valor.replace(',', '.')
+
+        cont += 1
+
+    return render_template('index.html', imoveis=imoveis , bairros=bairros)
+
+
+@public_routes.route('/imovel/<id>', methods=['GET'])
+def imovel_page(id):
+    response = requests.get(url=api('imovel'), params={'imovel_id': id})
+    response_json = response.json()
+    response_code =  response.status_code
+
+    if response_json['codigo-requisicao'] != 'in200':
+        return render_template('index.html', imoveis=[] , bairros=[])
+
+    imovel = response_json['imovel']
+
+    return render_template('index.html', imovel)
+
 
 @public_routes.route('/index', methods=['POST'])
 def login_form():

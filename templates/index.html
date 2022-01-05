@@ -6,7 +6,7 @@
 		<div class="row justify-content-center">
 			<div class="banner-slogan col-12 col-md-10 col-lg-9">
 				<div class="text-center">
-					<h1>O melhor meio de encontrar seu imóvel ideal</h1>
+					<h1>Sua busca começa e termina aqui!</h1>
 					<div class="line"></div>
 					<p>Pesquise aqui o seu imóvel</p>
 				</div>
@@ -15,26 +15,32 @@
 				<form class="row">
 					<div class="col col-12 col-md-3">
 						<select>
-							<option>Lugar</option>
-							<option value="1">lugar 1</option>
-							<option value="2">lugar 2</option>
-							<option value="3">lugar 3</option>
+							<option value="1">Vender</option>
+							<option value="2">Alugar</option>
 						</select>
 					</div>
 					<div class="col col-12 col-md-3">
 						<select>
-							<option>Empresa</option>
-							<option value="1">lugar 1</option>
-							<option value="2">lugar 2</option>
-							<option value="3">lugar 3</option>
+							<option>Bairro</option>
+							{% for bairro in bairros %}
+							<option value="1">{{ bairro }}</option>
+							{% endfor %}
 						</select>
 					</div>
 					<div class="col col-12 col-md-3">
 						<select>
-							<option>Preço</option>
-							<option value="1">lugar 1</option>
-							<option value="2">lugar 2</option>
-							<option value="3">lugar 3</option>
+							<option>Valor</option>
+							<option value="1">R$ 100.000 - R$ 200.000</option>
+							<option value="1">R$ 200.000 - R$ 300.000</option>
+							<option value="1">R$ 400.000 - R$ 500.000</option>
+							<option value="1">R$ 600.000 - R$ 700.000</option>
+							<option value="1">R$ 800.000 - R$ 900.000</option>
+							<option value="1">R$ 1.000.000 - R$ 2.000.000</option>
+							<option value="1">R$ 2.000.000 - R$ 3.000.000</option>
+							<option value="1">R$ 4.000.000 - R$ 5.000.000</option>
+							<option value="1">R$ 5.000.000 +</option>
+
+
 						</select>
 					</div>
 					<div class="col col-12 col-md-3">
@@ -57,110 +63,32 @@
 		</h1>
 		<div class="row">
 			<div class="owl-carousel owl-theme owl-imoveis">
-				<!-- IMOVEL 1 -->
+				{% for imovel in imoveis %}
 				<div class="imovel">
-					<a href="">
+					<a href="imovel/{{ imovel['_id'] }}">
 						<img class="img-bg" src="../static/img/casa-ex.jpg">
 						<div class="content">
 							<h2 class="state">Pronto para morar</h2>
 							<div class="details">
 								<img class="owner" src="../static/img/casa-ex.jpg">
 								<div>
-									<h3>MRV Imóveis</h3>
-									<h3>Cidade Satélite</h3>
+									<h3>{{ imovel['corretor_nome'] }}</h3>
+									<h3>{{ imovel['bairro'] }}</h3>
 								</div>
 								<i class="acess-btn far fa-arrow-alt-circle-right"></i>
 							</div>
 							<div class="details">
-								<h3 class="price">R$ 80,650.00</h3>
+								<h3 class="price">R$ {{ imovel['valor'] }}</h3>
 								<ul>
-									<li><i class="fas fa-toilet"></i>2</li>
-									<li><i class="fas fa-bed"></i>3</li>
-									<li><i class="fas fa-pencil-ruler"></i>82 m²</li>
+									<li><i class="fas fa-toilet"></i>{{ imovel['banheiros'] }}</li>
+									<li><i class="fas fa-bed"></i>{{ imovel['quartos'] }}</li>
+									<li><i class="fas fa-pencil-ruler"></i>{{ imovel['tamanho'] }} m²</li>
 								</ul>
 							</div>
 						</div>
 					</a>
 				</div>
-
-				<!-- IMOVEL 1 -->
-				<div class="imovel">
-					<a href="">
-						<img class="img-bg" src="../static/img/casa-ex.jpg">
-						<div class="content">
-							<h2 class="state">Pronto para morar</h2>
-							<div class="details">
-								<img class="owner" src="../static/img/casa-ex.jpg">
-								<div>
-									<h3>MRV Imóveis</h3>
-									<h3>Cidade Satélite</h3>
-								</div>
-								<i class="acess-btn far fa-arrow-alt-circle-right"></i>
-							</div>
-							<div class="details">
-								<h3 class="price">R$ 80,650.00</h3>
-								<ul>
-									<li><i class="fas fa-toilet"></i>2</li>
-									<li><i class="fas fa-bed"></i>3</li>
-									<li><i class="fas fa-pencil-ruler"></i>82 m²</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- IMOVEL 1 -->
-				<div class="imovel">
-					<a href="">
-						<img class="img-bg" src="../static/img/casa-ex.jpg">
-						<div class="content">
-							<h2 class="state">Pronto para morar</h2>
-							<div class="details">
-								<img class="owner" src="../static/img/casa-ex.jpg">
-								<div>
-									<h3>MRV Imóveis</h3>
-									<h3>Cidade Satélite</h3>
-								</div>
-								<i class="acess-btn far fa-arrow-alt-circle-right"></i>
-							</div>
-							<div class="details">
-								<h3 class="price">R$ 80,650.00</h3>
-								<ul>
-									<li><i class="fas fa-toilet"></i>2</li>
-									<li><i class="fas fa-bed"></i>3</li>
-									<li><i class="fas fa-pencil-ruler"></i>82 m²</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- IMOVEL 1 -->
-				<div class="imovel">
-					<a href="">
-						<img class="img-bg" src="../static/img/casa-ex.jpg">
-						<div class="content">
-							<h2 class="state">Pronto para morar</h2>
-							<div class="details">
-								<img class="owner" src="../static/img/casa-ex.jpg">
-								<div>
-									<h3>MRV Imóveis</h3>
-									<h3>Cidade Satélite</h3>
-								</div>
-								<i class="acess-btn far fa-arrow-alt-circle-right"></i>
-							</div>
-							<div class="details">
-								<h3 class="price">R$ 80,650.00</h3>
-								<ul>
-									<li><i class="fas fa-toilet"></i>2</li>
-									<li><i class="fas fa-bed"></i>3</li>
-									<li><i class="fas fa-pencil-ruler"></i>82 m²</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-				</div>
-
+				{% endfor %}
 			</div>
 		</div>
 	</div>
