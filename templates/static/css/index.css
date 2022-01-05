@@ -1,0 +1,524 @@
+body {
+    font-family: "Rubik", sans-serif;;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+button:focus {
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+ 
+.pulse:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+
+/* ini: Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 1999;
+}
+
+#preloader .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pulsex {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+.pulseIcon:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+/* end: Preloader */
+
+/* Geral */
+
+h1.title{
+    color: #061539;
+    font-size: 46px;
+    margin: 0 auto;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+h1.title::after{
+    content: '';
+    display: block;
+    background: #061539;
+    width: 100px;
+    height: 4px;
+    position: relative;
+    left: 15px;
+}
+
+a.see-more-btn{
+    color: #fff;
+    background: #5D30FF;
+    border: 4px solid #5D30FF;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 8px 26px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: .4s;
+}
+
+a.see-more-btn:hover{
+    background: transparent;
+    color: #5D30FF;
+}
+
+/* header */
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .navbar{
+    background: #061539;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 5px 10px;
+}
+
+header .navbar-brand{
+    margin-right: 3rem;
+}
+
+header .navbar-brand img{
+    width: 100%;
+    max-width: 200px;
+}
+
+
+header .navbar-nav .nav-item .nav-link{
+    font-size: 20px;
+    /*background: -webkit-linear-gradient(#006699, #003399);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    color: white;
+    font-weight: 500;
+    padding: 0.6rem;
+}
+
+
+
+/* Banner */
+
+section.banner{
+    min-height: 100vh;
+    padding: 300px;
+    background: url(../img/banner1.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.banner .banner-slogan p{
+    color: #fff;
+}
+
+section.banner .banner-slogan h1{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 700;
+}
+
+section.banner .banner-slogan .line {
+    background: #fff;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+}
+
+section.banner .banner-slogan .line:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 110px;
+    left: -125px;
+    top: 3px;
+    background: #fff;
+}
+
+section.banner .banner-slogan .line:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 110px;
+    right: -125px;
+    top: 3px;
+    background: #fff;
+}
+
+section.banner .banner-form .col{
+    padding: 5px;
+}
+
+section.banner .banner-form select{
+    width: 100%;
+    border: 0;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px !important;
+    padding: 0 15px;
+    color: #9c9da0;
+    font-size: 16px;
+}
+
+section.banner .banner-form button.btn{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 35px;
+    overflow: hidden;
+    position: relative;
+    border: 0;
+    transition: all 0.5s ease;
+    font-size: 15px;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    color: #fff;
+    border: 0;
+    background: #ff9900;
+    transition: .4s;
+}
+
+section.banner .banner-form button.btn i{
+    font-size: 14px;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2.7px solid white;
+    border-radius: 60px;
+    position: relative;
+    top: 150px;
+}
+.mouse::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.5s infinite;
+    -webkit-animation: wheel 1.5s infinite;
+
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px;
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px;
+    }
+}
+
+
+/* IMOVEIS */
+
+section.imoveis{
+    padding: 4rem 0;
+}
+
+section.imoveis .imovel {
+    width: 100%;
+    height: 360px;
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+section.imoveis .imovel:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 52%, rgba(0, 0, 0, 0));
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: 0;
+    transition: .6s;
+}
+
+section.imoveis .imovel img.img-bg{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 360px;
+    object-fit: cover;
+    transition: 1.5s;
+}
+
+section.imoveis .imovel .content{
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px;
+    align-items: center;
+    transition: .6s;
+}
+
+section.imoveis .imovel .content .state{
+    color: white;
+    background: #061e6ad9;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.imoveis .imovel .content .details{
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+}
+
+section.imoveis .imovel .content .details img.owner{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+section.imoveis .imovel .content .details h3{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+section.imoveis .imovel .content .details i.acess-btn{
+    margin-left: auto;
+    color: white;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+section.imoveis .imovel .content .details ul{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    float: right;
+    margin-left: auto;
+    color: #fff;
+}
+
+section.imoveis .imovel .content .details ul li{
+    padding: 0 9px;
+}
+
+section.imoveis .imovel .content .details ul li i{
+    margin-right: 4px;
+}
+
+section.imoveis .imovel:hover img.img-bg{
+    transform: scale(1.1);
+}
+
+section.imoveis .imovel:hover .content{
+    opacity: 0;
+}
+
+section.imoveis .imovel:hover::after{
+    opacity: .3;
+}
+
+/* Footer */
+
+footer{
+    padding: 7rem 0 2rem;
+    height: 470px;
+    clip-path: ellipse(150% 100% at 50% 100%);
+    position: relative;
+    background: #090909;
+    color: #fff;
+    overflow: hidden;
+}
+
+footer .info{
+    position: relative;
+    z-index: 2;
+}
+
+footer .info ul.social{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3rem;
+}
+
+footer .info ul.social li{
+    margin: 15px;
+    transition: .4s;
+}
+
+footer .info ul.social li:hover{
+    transform: scale(1.3);
+}
+
+footer .info p{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+footer .info small{
+    font-size: 16px;
+}
+
+/* ANIMAÇÃO DAS ONDAS DO FOOTER */
+
+footer .ocean { 
+  height: 225px;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  overflow: hidden;
+  filter: grayscale(1);
+  transform: scale(1.4);
+  opacity: .5;
+}
+
+footer .wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  width: 6400px;
+  height: 198px;
+  animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite,swell 7s ease -1.25s infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+footer .wave:nth-child(2) {
+  animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -15s infinite, swell 12s ease -7.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,30px,0);
+  }
+  50% {
+    transform: translate3d(0,0,0);
+  }
+}
+
