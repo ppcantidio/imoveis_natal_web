@@ -51,6 +51,44 @@ def imovel_page(id):
     return render_template('index.html', imovel)
 
 
+# @public_routes.route('/imovel/busca', methods='GET')
+# def busca_personalizada():
+#     tipo = request.args.get('tipo')
+#     categoria = request.args.get('categoria')
+#     bairro = request.args.get('bairro')
+#     valor = request.args.get('valor')
+#     quartos = request.args.get('quartos')
+#     imovel_id = request.args.get('imovel_id')
+#     corretor_id = request.args.get('corretor_id')
+
+#     params = {}
+#     if tipo is not None:
+#         params['tipo'] = tipo
+
+#     if categoria is not None:
+#         params['categoria'] = categoria
+
+#     if bairro is not None:
+#         params['bairro'] = bairro
+
+#     if valor is not None:
+#         params['valor'] = valor
+
+#     if quartos is not None:
+#         params['quartos'] = quartos
+
+#     if imovel_id is not None:
+#         params['imovel_id'] = imovel_id
+
+#     if corretor_id is not None:
+#         params['corretor_id'] = corretor_id
+
+#     response = requests.get(url=api('imoveis/busca'), params=params)
+#     response_json =  response.json()
+
+#     if response_json['codigo-requisicao'] == 'in200':
+#         return render_template('index.html', imoveis=response_json['imoveis'])
+
 @public_routes.route('/index', methods=['POST'])
 def login_form():
     email = request.form.get('email')
