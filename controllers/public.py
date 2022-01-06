@@ -125,17 +125,17 @@ def logado():
         return render_template('logado.html')
 
 
-@public_routes.route('/uploadteste', methods=['GET', 'POST'])
-def upload():
-    if request.method == 'GET':
-        return """
-        <form method="POST" enctype="multipart/form-data" action="POST">
-            <input type="file" name="file[]" multiple="">
-            <input type="submit" value="add">
-        </form>
-        """
+# @public_routes.route('/uploadteste', methods=['GET', 'POST'])
+# def upload():
+#     if request.method == 'GET':
+#         return """
+#         <form method="POST" enctype="multipart/form-data" action="POST">
+#             <input type="file" name="file[]" multiple="">
+#             <input type="submit" value="add">
+#         </form>
+#         """
 
-    else:
-        uploaded_files = request.files.getlist("file[]")
-        print (uploaded_files)
-        return ""
+#     else:
+#         uploaded_files = request.files.getlist("file[]")
+#         print (uploaded_files)
+#         return ""
