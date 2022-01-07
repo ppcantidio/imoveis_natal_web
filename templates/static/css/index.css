@@ -149,7 +149,8 @@ header .navbar{
     background: #061539;
     border-radius: 5px;
     margin: 20px auto;
-    padding: 5px 10px;
+    padding: 5px 0px 5px 10px;
+    height: 80px;
 }
 
 header .navbar-brand{
@@ -158,29 +159,83 @@ header .navbar-brand{
 
 header .navbar-brand img{
     width: 100%;
-    max-width: 80px;
+    max-height: 45px;
 }
-
 
 header .navbar-nav .nav-item .nav-link{
-    font-size: 20px;
-    /*background: -webkit-linear-gradient(#006699, #003399);
-    
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
+    font-size: 16px;
     color: white;
     font-weight: 500;
-    padding: 0.6rem;
+    padding: 0 0.8rem;
+    transition: .4s;
 }
 
+header .navbar-nav .nav-item .nav-link:hover{
+    color: #ff9900;
+}
 
+header .nav-right-part-desktop{
+    display: flex;
+    align-items: center;
+}
+
+header .nav-right-part-desktop .search-btn{
+    margin-right: 60px;
+}
+
+header .nav-right-part-desktop .search-btn svg path{
+    fill: #fff;
+}
+
+header .nav-right-part-desktop .anunciar-btn{
+    background-color: #ff9900;
+    height: 80px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center; 
+    position: relative;
+}
+
+header .nav-right-part-desktop .anunciar-btn span{
+    color: #212529;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .nav-right-part-desktop .anunciar-btn .btn-icon{
+    background: #061539;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    left: -27px;
+    z-index: 2;
+    top: 50%;
+    margin-top: -23px;
+    display: flex;
+}
+
+header .nav-right-part-desktop .anunciar-btn .btn-icon svg{
+    background: #ff9900;
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    border-radius: 7px;
+    fill: #fff;
+}
+
+header .nav-right-part-desktop .anunciar-btn .btn-icon svg path{
+    fill: #061539;
+}
 
 /* Banner */
 
 section.banner{
+    width: 100%;
     min-height: 100vh;
     padding: 300px;
     background: url(../img/banner1.png);
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,7 +314,7 @@ section.banner .banner-form button.btn{
     transition: .4s;
 }
 
-section.banner .banner-form button.btn i{
+section.banner .banner-form button.btn svg{
     font-size: 14px;
     margin-top: -2px;
     margin-right: 5px;
@@ -397,7 +452,7 @@ section.imoveis .imovel .content .details h3{
     margin-top: 3px;
 }
 
-section.imoveis .imovel .content .details i.acess-btn{
+section.imoveis .imovel .content .details svg.acess-btn{
     margin-left: auto;
     color: white;
     font-size: 24px;
@@ -417,8 +472,8 @@ section.imoveis .imovel .content .details ul li{
     padding: 0 9px;
 }
 
-section.imoveis .imovel .content .details ul li i{
-    margin-right: 4px;
+section.imoveis .imovel .content .details ul li svg{
+    margin-right: 6px;
 }
 
 section.imoveis .imovel:hover img.img-bg{
