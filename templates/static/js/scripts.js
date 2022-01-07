@@ -46,3 +46,14 @@ $('.owl-imoveis').owlCarousel({
         }
     }
 });
+
+$('#owl-banner').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    animateOut: 'fadeOut',
+    dots:true,
+    autoplay:true,
+    autoplayTimeout:8000,
+    items:1
+});
