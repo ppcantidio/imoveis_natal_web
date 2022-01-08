@@ -105,7 +105,11 @@ h1.title{
     font-size: 46px;
     margin: 0 auto;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+h1.title.white{
+    color: #fff;
 }
 
 h1.title::after{
@@ -116,6 +120,43 @@ h1.title::after{
     height: 5px;
     position: relative;
     left: 20px;
+}
+
+h1.title.white::after{
+    background-color: #fff;
+}
+
+.btn-ver-mais{
+    background: #061539;
+    color: white;
+    font-size: 18px;
+    padding: 8px 30px;
+    border-radius: 10px;
+    transition: .4s;
+    display: table;
+    margin: 10px auto 20px;
+    min-width: 200px;
+    font-weight: 500;
+    border: 3px solid #061539;
+}
+
+.btn-ver-mais:hover{
+    color: #061539;
+    background: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+    background-color: transparent!important;
+    width: 14px!important;
+    height: 14px!important;
+    margin: 20px 3px 30px!important;
+    transition: .2s!important;
+    border: 2px solid #061539;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #061539!important;
+    width: 20px!important;
 }
 
 nav.breadcrumbs ol{
@@ -359,10 +400,9 @@ section.banner #owl-banner .owl-dots{
 }
 
 section.banner #owl-banner .owl-dots span{
-    width: 14px!important;
-    height: 14px!important;
-    background-color: #fff;
-    transition: .8s;
+    background-color: #fff!important;
+    transition: .8s!important;
+    border: 0!important;
 }
 
 section.banner #owl-banner .owl-dots .active span{
@@ -463,11 +503,11 @@ section.banner .banner-form button.btn svg{
 
 /* IMOVEIS CARDS */
 
-section.imoveis{
+section.imoveis.destaque{
     padding: 4rem 0;
 }
 
-section.imoveis .imovel {
+section.imoveis.destaque .imovel {
     width: 100%;
     height: 360px;
     transition: .4s;
@@ -477,7 +517,7 @@ section.imoveis .imovel {
     border-radius: 5px;
 }
 
-section.imoveis .imovel:after {
+section.imoveis.destaque .imovel:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -490,7 +530,7 @@ section.imoveis .imovel:after {
     transition: .6s;
 }
 
-section.imoveis .imovel img.img-bg{
+section.imoveis.destaque .imovel img.img-bg{
     position: absolute;
     width: 100%;
     left: 0;
@@ -502,7 +542,7 @@ section.imoveis .imovel img.img-bg{
     transition: 1.5s;
 }
 
-section.imoveis .imovel .content{
+section.imoveis.destaque .imovel .content{
     width: 100%;
     z-index: 3;
     position: absolute;
@@ -518,7 +558,7 @@ section.imoveis .imovel .content{
     transition: .6s;
 }
 
-section.imoveis .imovel .content .state{
+section.imoveis.destaque .imovel .content .state{
     color: white;
     background: #061e6ad9;
     width: 60%;
@@ -532,13 +572,13 @@ section.imoveis .imovel .content .state{
     justify-content: center;
 }
 
-section.imoveis .imovel .content .details{
+section.imoveis.destaque .imovel .content .details{
     display: flex;
     width: 100%;
     padding: 5px 0;
 }
 
-section.imoveis .imovel .content .details img.owner{
+section.imoveis.destaque .imovel .content .details img.owner{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -546,21 +586,35 @@ section.imoveis .imovel .content .details img.owner{
     margin-right: 10px;
 }
 
-section.imoveis .imovel .content .details h3{
+section.imoveis.destaque .imovel .content .details h2{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+section.imoveis.destaque .imovel .content .details h3{
     color: #fff;
     font-size: 15px;
     font-weight: 600;
     margin-top: 3px;
 }
 
-section.imoveis .imovel .content .details svg.acess-btn{
+section.imoveis.destaque .imovel .content .details h4{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+section.imoveis.destaque .imovel .content .details svg.acess-btn{
     margin-left: auto;
     color: white;
     font-size: 24px;
     margin-top: 5px;
 }
 
-section.imoveis .imovel .content .details ul{
+section.imoveis.destaque .imovel .content .details ul{
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -569,25 +623,149 @@ section.imoveis .imovel .content .details ul{
     color: #fff;
 }
 
-section.imoveis .imovel .content .details ul li{
+section.imoveis.destaque .imovel .content .details ul li{
     padding: 0 9px;
 }
 
-section.imoveis .imovel .content .details ul li svg{
+section.imoveis.destaque .imovel .content .details ul li svg{
     margin-right: 6px;
 }
 
-section.imoveis .imovel:hover img.img-bg{
+section.imoveis.destaque .imovel:hover img.img-bg{
     transform: scale(1.1);
 }
 
-section.imoveis .imovel:hover .content{
+section.imoveis.destaque .imovel:hover .content{
     opacity: 0;
 }
 
-section.imoveis .imovel:hover::after{
+section.imoveis.destaque .imovel:hover::after{
     opacity: .3;
 }
+
+section.imoveis.destaque .owl-carousel .owl-nav button{
+    position: absolute;
+    top: 38%;
+    background: transparent!important;
+    font-size: 32px;
+    color: #061539;
+    transition: .2s;
+}
+
+section.imoveis.destaque .owl-carousel .owl-nav button:hover{
+    color: #ff5e00;
+}
+
+section.imoveis.destaque .owl-carousel .owl-nav button.owl-prev{
+    left: -60px;
+}
+
+section.imoveis.destaque .owl-carousel .owl-nav button.owl-next{
+    right: -60px;
+}
+
+section.imoveis.destaque .owl-carousel .owl-nav .disabled{
+    opacity: 0!important;
+}
+
+/* CORRETORES */
+
+section.corretores{
+    background: url(../img/corretor-bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+}
+
+section.corretores .owl-carousel .owl-stage-outer{
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+section.corretores .owl-carousel .item{
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    padding-top: 160px;
+    transition: .4s;
+}
+
+section.corretores .owl-carousel .item:hover{
+    transform: scale(1.1);
+}
+
+section.corretores .owl-carousel .item .header {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-80px);
+}
+
+section.corretores .owl-carousel .item .header img{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+section.corretores .owl-carousel .item .header h2{
+    text-align: center;
+    font-size: 26px;
+    margin-top: 10px;
+    color:#061539;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+section.corretores .owl-carousel .item .header h3{
+    text-align: center;
+    font-size: 16px;
+    color: #ff5e00;
+}
+
+section.corretores .owl-carousel .item .content .social{
+    display: flex;
+    justify-content: center;
+}
+
+section.corretores .owl-carousel .item .content .social a{
+    color:#fff;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid #061539;
+    background-color: #061539;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+section.corretores .owl-carousel .item .content .social a svg{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+section.corretores .owl-carousel .item .content a.see-more{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3e3e3e;
+    margin-top: 12px;
+}
+
+/*
+ INTERNAS --------- INTERNAS --------- INTERNAS --------- INTERNAS --------- INTERNAS
+ INTERNAS --------- INTERNAS --------- INTERNAS --------- INTERNAS --------- INTERNAS
+ INTERNAS --------- INTERNAS --------- INTERNAS --------- INTERNAS --------- INTERNAS
+*/
 
 /* IMOVEL INTERNA */
 
@@ -629,8 +807,6 @@ section.imovel .main section .block-header h3{
     font-weight: 600;
 }
 
-section.imovel .main section .block-content{
-}
 
 section.imovel .sidebar .contact-bar{
     background: #fff;

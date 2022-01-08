@@ -56,10 +56,9 @@
 			</div>
 		</div>
 	</div>
-	<!--<div class="mouse"></div>-->
 </section>
 
-<section class="imoveis" id="imoveis">
+<section class="imoveis destaque" id="imoveis_destaque">
 	<div class="container">
 		<h1 class="title">
 			Imóveis em destaque
@@ -75,8 +74,8 @@
 							<div class="details">
 								<img class="owner" src="../static/img/casa-ex.jpg">
 								<div>
-									<h3>{{ imovel['corretor_nome'] }}</h3>
-									<h3>{{ imovel['bairro'].title() }}</h3>
+									<h2>{{ imovel['titulo'] }}</h2>
+									<h4>{{ imovel['bairro'].title() }}</h4>
 								</div>
 								<i class="acess-btn far fa-arrow-alt-circle-right"></i>
 							</div>
@@ -90,6 +89,39 @@
 							</div>
 						</div>
 					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<a href="" class="btn btn-ver-mais">
+			Ver mais
+		</a>
+	</div>
+</section>
+
+<section class="corretores" id="corretores">
+	<div class="container">
+		<h1 class="title white">
+			Nossos corretores
+		</h1>
+		<div class="row">
+			<div class="owl-carousel owl-theme" id="owl-corretores">
+				{% for x in range(6) %}
+				<div class="item">
+					<div class="header">
+						<img class="img-bg" src="../static/img/casa-ex.jpg">
+						<h2>Pedro Gois</h2>
+						<h3>Corretor</h3>
+					</div>
+					<div class="content">
+						<div class="social">
+							<a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						</div>
+						<a class="see-more" href="">Ver imóveis <i class="fas fa-long-arrow-alt-right"></i></a>
+					</div>
 				</div>
 				{% endfor %}
 			</div>

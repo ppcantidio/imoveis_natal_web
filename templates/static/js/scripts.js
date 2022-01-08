@@ -33,7 +33,7 @@ $('.owl-imoveis').owlCarousel({
     autoplay:false,
     autoplayTimeout:4000,
     autoplayHoverPause:true,
-    navText:["<img src='./assets/img/icons/prev-btn.svg'>","<img src='./assets/img/icons/next-btn.svg'>"],
+    navText:["<i class='fas fa-arrow-circle-left'></i>","<i class='fas fa-arrow-circle-right'></i>"],
     responsive:{
         0:{
             items:1
@@ -43,6 +43,27 @@ $('.owl-imoveis').owlCarousel({
         },
         1100:{
             items:3
+        }
+    }
+});
+
+$('#owl-corretores').owlCarousel({
+    loop:false,
+    margin:25,
+    nav:false,
+    dots:true,
+    autoplay:false,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        800:{
+            items:3
+        },
+        1200:{
+            items:4
         }
     }
 });
