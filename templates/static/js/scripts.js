@@ -9,12 +9,12 @@ $('.scrollll a[href^="#"]').on('click', function(e) {
     }, 1000);
 });
 
-// var p = window.location.pathname;
-// console.log(p)
-// // Adciona classe no header das internas
-// if ((p !== "/imoveis/index.php") && (p !== "/imoveis/") && (p !== "/index.php") && (p !== "/")){
-//     $("header").addClass("interna");
-// } 
+ var p = window.location.pathname;
+ console.log(p)
+ // Adciona classe no header das internas
+ if ((p !== "/index") && (p !== "/")){
+    $("header").addClass("interna");
+ } 
 
 // script carregamento de pagina
 $(window).on('load', function() {
@@ -51,7 +51,7 @@ $('#owl-banner').owlCarousel({
     loop:true,
     margin:0,
     nav:false,
-    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     dots:true,
     autoplay:true,
     autoplayTimeout:8000,

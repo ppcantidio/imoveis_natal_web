@@ -39,6 +39,14 @@ def index():
     return render_template('index.html', imoveis=imoveis , bairros=bairros)
 
 
+
+@public_routes.route('/imovel', methods=['GET'])
+def imovel():
+    return render_template('imovel.html')
+
+
+
+
 @public_routes.route('/imovel/<id>', methods=['GET'])
 def imovel_page(id):
     response = requests.get(url=api('imovel'), params={'imovel_id': id})
@@ -46,11 +54,11 @@ def imovel_page(id):
     response_code =  response.status_code
 
     if response_json['codigo-requisicao'] != 'in200':
-        return render_template('index.html', imoveis=[] , bairros=[])
+        return render_template('imovel.html', imoveis=[] , bairros=[])
 
     imovel = response_json['imovel']
 
-    return render_template('index.html', imovel)
+    return render_template('imovel.html', imovel)
 
 
 # @public_routes.route('/imovel/busca', methods='GET')

@@ -1,0 +1,53 @@
+{% include 'components/head.html' %}
+{% include 'components/header.html' %}
+
+<section class="imovel interna">
+    <div class="container">
+        <div class="row">
+
+            <!-- CABEÇALHO DO IMÓVEL -->
+            <div class="col-12 page-header">
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/index">Apartamento</a></li>
+                        <li>Design Harmonia em Araraquara</li>
+                    </ol>
+                </nav>
+                <h1 class="imovel-title">
+                    Design Harmonia em Araraquara
+                </h1>
+                <div class="property-tags my-2">
+                    <span class="tag">CORRETOR</span>
+                    <span class="tag">EM OMBRAS</span>
+                    <span class="tag">APARTAMENTO</span>
+                </div>
+                <p class="localization">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Av. Orestes Pioreni Gobbo, 152 - Vila Harmonia - 14802-560
+                </p>
+            </div>
+
+            <!-- CORPO PRINCIPAL DO IMOVEL -->
+            <div class="col-9 main">
+                <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-fit="cover" data-thumbwidth="80" data-thumbheight="80" data-autoplay="6000">
+                    <img src="https://s.fotorama.io/1.jpg">
+                    <img src="https://s.fotorama.io/2.jpg">
+                </div>
+                <section class="ficha">
+                    <div class="block-header d-flex justify-content-between">
+                        <h3>Resumo</h3>
+                        <span><strong>Código do Imóvel: </strong>CH-HARMONIA</span>
+                    </div>
+                    <div class="block-content">
+                        <div class="d-flex">
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'components/footer.html' %}
