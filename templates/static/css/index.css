@@ -807,6 +807,21 @@ section.imovel .main section .block-header h3{
     font-weight: 600;
 }
 
+section.imovel .main section#ficha .block-content .items{
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style: none;
+    padding: 0 15px;
+}
+
+section.imovel .main section#ficha .block-content .items li{
+    padding: 15px 8px;
+    border-bottom: 1px solid #21252945;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 section.imovel .sidebar .contact-bar{
     background: #fff;
