@@ -44,7 +44,9 @@ def index():
 def imovel():
     return render_template('imovel.html')
 
-
+@public_routes.route('/login', methods=['GET'])
+def login():
+    return render_template('login.html')
 
 
 @public_routes.route('/imovel/<id>', methods=['GET'])

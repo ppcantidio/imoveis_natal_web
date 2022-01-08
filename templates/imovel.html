@@ -30,7 +30,7 @@
 
             <!-- CORPO PRINCIPAL DO IMOVEL -->
             <div class="col-9 main">
-                <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-thumbwidth="80" data-thumbheight="80" data-autoplay="6000">
+                <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-thumbwidth="80" data-thumbheight="80" data-autoplay="10000">
                     <img src="https://s.fotorama.io/1.jpg">
                     <img src="https://s.fotorama.io/2.jpg">
                 </div>
@@ -50,7 +50,7 @@
 
                 <!-- APRESENTAÇÃO -->
                 <section id="apresentacao">
-                    <div class="block-header d-flex justify-content-between">
+                    <div class="block-header">
                         <h3>Apresentação</h3>
                     </div>
                     <div class="block-content">
@@ -67,7 +67,7 @@
 
                 <!-- FACILIDADES -->
                 <section id="facilidades">
-                    <div class="block-header d-flex justify-content-between">
+                    <div class="block-header">
                         <h3>Facilidades</h3>
                     </div>
                     <div class="block-content">
@@ -75,9 +75,20 @@
                     </div>
                 </section>
 
+                <!-- LOCALIZAÇÃO -->
+                <section id="localizacao">
+                    <div class="block-header d-flex justify-content-between">
+                        <h3>Localização</h3>
+                    </div>
+                    <div class="block-content">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6675.544555689557!2d-35.206309751268655!3d-5.812879914379044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2fffa55a2be71%3A0xebf15047f9f8e07c!2sMidway%20Mall!5e0!3m2!1spt-BR!2sbr!4v1641613039517!5m2!1spt-BR!2sbr"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </section>
+
                 <!-- CONTATO -->
                 <section id="contato">
-                    <div class="block-header d-flex justify-content-between">
+                    <div class="block-header">
                         <h3>Entre em contato</h3>
                     </div>
                     <div class="block-content">
@@ -95,6 +106,25 @@
                             <h3>Adna</h3>
                             <a href="">Ver imóveis</a>
                         </div>
+                    </div>
+                    <Form class="contact-form pt-3" method="post">
+                        <div class="form-group">
+                            <input class="form-control" name="name" value="" type="text" placeholder="Nome">
+                        </div>
+                        <div class="form-group"> 
+                            <input class="form-control" name="mobile" value="" type="text" placeholder="Celular">
+                        </div>
+                        <div class="form-group"> 
+                            <input class="form-control" name="email" value="" type="email" placeholder="E-mail">
+                        </div>
+                        <div class="form-group form-group-textarea">
+                            <textarea class="form-control hz-form-message" name="message" rows="4" placeholder="Mensagem">Olá, tenho interesse no imóvel ...</textarea>
+                        </div>
+                        <button type="button" class="btn btn-send"> Enviar </button>
+                    </Form>
+                    <div class="d-flex">
+                        <a class="contact-btn" href=""><i class="fas fa-phone-alt"></i>Ligar</a>
+                        <a class="contact-btn" href=""><i class="fab fa-whatsapp"></i>WhatsApp</a>
                     </div>
                 </div>
             </div>
