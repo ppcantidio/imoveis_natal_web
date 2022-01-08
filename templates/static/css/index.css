@@ -595,6 +595,10 @@ section.imovel{
     padding: 2rem 0;
 }
 
+section.imovel .page-header{
+    padding-bottom: 1rem;
+}
+
 section.imovel .page-header h1.imovel-title{
     font-size: 32px;
     margin-bottom: 10px;
@@ -605,9 +609,6 @@ section.imovel .page-header p.localization{
     margin-top: 10px;
 }
 
-section.imovel .main{
-    padding-top: 1rem;
-}
 
 section.imovel .main section{
     background-color: #fff;
@@ -618,17 +619,46 @@ section.imovel .main section{
 
 section.imovel .main section .block-header{
     padding-bottom: 2rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid #dce0e0;
 }
 
 section.imovel .main section .block-header h3{
-    font-size: 20px;
+    font-size: 24px;
     color: #020f2e;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 section.imovel .main section .block-content{
-    
+}
+
+section.imovel .sidebar .contact-bar{
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+section.imovel .sidebar .contact-bar .corretor{
+    display: flex;
+}
+
+section.imovel .sidebar .contact-bar .corretor img{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+section.imovel .sidebar .contact-bar .corretor h3{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+section.imovel .sidebar .contact-bar .corretor a{
+    font-size: 14px;
+    color: #737373;
+    font-weight: 500;
 }
 
 /* Footer */
