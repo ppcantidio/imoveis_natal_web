@@ -17,8 +17,6 @@ class Imoveis():
             valor = '{0:,}'.format(imoveis[cont]['valor'])
             imoveis[cont]['valor'] = valor.replace(',', '.')
 
-            imoveis[cont]['bairro'] = imoveis[cont]['bairro'].title()
-
             cont += 1
 
         return imoveis
