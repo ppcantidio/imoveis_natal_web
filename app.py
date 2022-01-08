@@ -1,5 +1,7 @@
 from flask import Flask
+from dotenv import load_dotenv
 
+load_dotenv('.env')
 app = Flask(__name__, static_folder='templates/static')
 
 from controllers.public import public_routes

@@ -11,35 +11,36 @@
                     <ol>
                         <li><a href="/index">Home</a></li>
                         <li><a href="/index">Apartamento</a></li>
-                        <li>Design Harmonia em Araraquara</li>
+                        <li>{{ imovel['titulo'] }}</li>
                     </ol>
                 </nav>
                 <h1 class="imovel-title">
-                    Design Harmonia em Araraquara
+                    {{ imovel['titulo'] }}
                 </h1>
                 <div class="property-tags my-2">
-                    <span class="tag">CORRETOR</span>
+                    <span class="tag">{{ imovel['corretor_nome'] }}</span>
                     <span class="tag">EM OMBRAS</span>
-                    <span class="tag">APARTAMENTO</span>
+                    <span class="tag">{{ imovel['tipo'].title() }}</span>
                 </div>
                 <p class="localization">
                     <i class="fas fa-map-marker-alt"></i>
-                    Av. Orestes Pioreni Gobbo, 152 - Vila Harmonia - 14802-560
+                    {{ imovel['endereco_completo'] }}
                 </p>
             </div>
 
             <!-- CORPO PRINCIPAL DO IMOVEL -->
             <div class="col-9 main">
                 <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-thumbwidth="80" data-thumbheight="80" data-autoplay="10000">
-                    <img src="https://s.fotorama.io/1.jpg">
-                    <img src="https://s.fotorama.io/2.jpg">
+                    {% for imagem in imovel['imagens'] %}
+                    <img src="../static/img_imoveis/{{ imagem }}">
+                    {% endfor %}
                 </div>
 
                 <!-- FICHA TECNICA -->
                 <section id="ficha">
                     <div class="block-header d-flex justify-content-between">
                         <h3>Ficha Técnica</h3>
-                        <span><strong>Código do Imóvel: </strong>CH-HARMONIA</span>
+                        <span><strong>Código do Imóvel: </strong>{{ imovel['_id'] }}</span>
                     </div>
                     <div class="block-content">
                         <div class="d-flex">
@@ -103,8 +104,8 @@
                     <div class="corretor">
                         <img src="../static/img/casa-ex.jpg">
                         <div>
-                            <h3>Adna</h3>
-                            <a href="">Ver imóveis</a>
+                            <h3>{{ imovel['corretor_nome'] }}</h3>
+                            <a href="../corretor/{{ imovel['corretor_id'] }}">Ver imóveis</a>
                         </div>
                     </div>
                     <Form class="contact-form pt-3" method="post">
