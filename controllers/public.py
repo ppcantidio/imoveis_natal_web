@@ -34,3 +34,8 @@ def imovel(id):
 @public_routes.route('/login', methods=['GET'])
 def login():
     return render_template('login.html')
+
+
+@public_routes.route('/buscar', methods=['GET'])
+def buscar():
+    return render_template('busca.html')

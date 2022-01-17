@@ -1,3 +1,5 @@
+
+
 // script suavizar scroll de rolagem com links de navegacao  
 $('.scrollll a[href^="#"]').on('click', function(e) {
     e.preventDefault();
@@ -9,12 +11,11 @@ $('.scrollll a[href^="#"]').on('click', function(e) {
     }, 1000);
 });
 
- var p = window.location.pathname;
- console.log(p)
- // Adciona classe no header das internas
- if ((p !== "/index") && (p !== "/")){
+var p = window.location.pathname;
+// Adciona classe no header das internas
+if ((p !== "/index") && (p !== "/")){
     $("header").addClass("interna");
- } 
+} 
 
 // script carregamento de pagina
 $(window).on('load', function() {
@@ -78,3 +79,5 @@ $('#owl-banner').owlCarousel({
     autoplayTimeout:8000,
     items:1
 });
+
+// Script para min and max range do   
