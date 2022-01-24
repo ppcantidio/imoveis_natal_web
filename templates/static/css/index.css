@@ -34,7 +34,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ffffff;
+    background-color: #061539;
     z-index: 1999;
 }
 
@@ -43,6 +43,10 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#preloader img{
+    width: 200px;
 }
 
 .pulsex {
@@ -693,6 +697,12 @@ section.imoveis.venda h2{
     color: #222222;
 }
 
+section.imoveis.aluguel .container-fluid .row,
+section.imoveis.venda .container-fluid .row{
+    max-width: 1920px;
+    margin: auto;
+}
+
 section.imoveis .imovel-item{
     position: relative;
     overflow: hidden;
@@ -751,6 +761,8 @@ section.imoveis .imovel-item:hover .header::before{
 section.imoveis .imovel-item .content{
     padding: 1rem;
     color: #636363;
+    display: flex;
+    flex-direction: column;
 }
 
 section.imoveis .imovel-item .content h3{
@@ -760,7 +772,7 @@ section.imoveis .imovel-item .content h3{
 }
 
 section.imoveis .imovel-item .content p.adress{
-    font-size: 12px;
+    font-size: 13px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -778,12 +790,20 @@ section.imoveis .imovel-item .content ul{
 }
 
 section.imoveis .imovel-item .content ul li{
-    margin: 0 5px;
-    font-size: 12px;
+    margin-right: 5px;
+    font-size: 13px;
 }
 
 section.imoveis .imovel-item .content ul li svg{
     margin-right: 3px;
+}
+
+section.imoveis .imovel-item .content p.price{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: #222222;
 }
 
 section.imoveis .imovel-item .content button{
