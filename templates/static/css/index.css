@@ -195,6 +195,33 @@ nav.breadcrumbs ol li:first-child::before{
     padding: 5px 10px;
 }
 
+/* NAVS */
+
+.owl-carousel .owl-nav button{
+    position: absolute;
+    top: 35%;
+    background: transparent!important;
+    font-size: 32px!important;
+    color: #061539!important;
+    transition: .2s;
+}
+
+.owl-carousel .owl-nav button:hover{
+    color: #ff5e00;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    left: -50px;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    right: -50px;
+}
+
+.owl-carousel .owl-nav .disabled{
+    opacity: 0!important;
+}
+
 /* header */
 
 header{
@@ -646,29 +673,136 @@ section.imoveis.destaque .imovel:hover::after{
     opacity: .3;
 }
 
-section.imoveis.destaque .owl-carousel .owl-nav button{
-    position: absolute;
-    top: 38%;
-    background: transparent!important;
+/* IMOVEIS */
+
+.owl-carousel.owl-imoveis .owl-item{
+    padding: 12px;
+}
+
+section.imoveis.aluguel,
+section.imoveis.venda{
+    background: #f7f8f9;
+    padding: 2rem 4rem 0;
+}
+
+section.imoveis.aluguel h2,
+section.imoveis.venda h2{
+    text-align: center;
     font-size: 32px;
-    color: #061539;
-    transition: .2s;
+    font-weight: 600;
+    color: #222222;
 }
 
-section.imoveis.destaque .owl-carousel .owl-nav button:hover{
-    color: #ff5e00;
+section.imoveis .imovel-item{
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    background: #fff;
+    border: 0;
+    box-shadow: 0 0 12px #00000029;
+    border-radius: 5px;
 }
 
-section.imoveis.destaque .owl-carousel .owl-nav button.owl-prev{
-    left: -60px;
+section.imoveis .imovel-item .header{
+    position: relative;
 }
 
-section.imoveis.destaque .owl-carousel .owl-nav button.owl-next{
-    right: -60px;
+section.imoveis .imovel-item .header::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to top, rgb(0 0 0 / 58%) 0%, rgba(0, 0, 0, 0));
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: 0;
+    transition: .6s;
 }
 
-section.imoveis.destaque .owl-carousel .owl-nav .disabled{
-    opacity: 0!important;
+section.imoveis .imovel-item .header img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+}
+
+section.imoveis .imovel-item .header .property-tags{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 8px 5px;
+    width: 100%;
+}
+
+section.imoveis .imovel-item .header .property-tags .tag{
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 2px 4px;
+    margin: 0 4px;
+    background-color: #020f2ec9;
+}
+
+section.imoveis .imovel-item:hover .header::before{
+    opacity: 0;
+}
+
+section.imoveis .imovel-item .content{
+    padding: 1rem;
+    color: #636363;
+}
+
+section.imoveis .imovel-item .content h3{
+    color: #222222;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+section.imoveis .imovel-item .content p.adress{
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 36px;
+    margin-bottom: 10px;
+}
+
+section.imoveis .imovel-item .content ul{
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+section.imoveis .imovel-item .content ul li{
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+section.imoveis .imovel-item .content ul li svg{
+    margin-right: 3px;
+}
+
+section.imoveis .imovel-item .content button{
+    border: 0;
+    background: #020f2e;
+    color: #fff;
+    margin-left: auto;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 14px;
+    transition: .4s;
+}
+
+section.imoveis .imovel-item .content button:hover{
+    background-color: #ff9900;
 }
 
 /* CORRETORES */
@@ -678,7 +812,7 @@ section.corretores{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    padding: 4rem 0;
+    padding: 4rem 0 6rem;
 }
 
 section.corretores .owl-carousel .owl-stage-outer{
@@ -762,6 +896,26 @@ section.corretores .owl-carousel .item .content a.see-more{
     font-weight: 500;
     color: #3e3e3e;
     margin-top: 12px;
+}
+
+section.procurar-corretor{
+    margin-top: -100px;
+    margin-bottom: 2rem;
+}
+
+section.procurar-corretor .content{
+    background-color: #061539;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 2px #0000007a;
+    flex-direction: column;
 }
 
 /*

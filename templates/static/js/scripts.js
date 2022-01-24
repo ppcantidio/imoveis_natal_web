@@ -28,6 +28,28 @@ $(window).on('load', function() {
 
 $('.owl-imoveis').owlCarousel({
     loop:false,
+    margin:0,
+    nav:true,
+    dots:false,
+    autoplay:true,
+    autoplayTimeout:6000,
+    autoplayHoverPause:true,
+    navText:["<i class='fas fa-arrow-circle-left'></i>","<i class='fas fa-arrow-circle-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        800:{
+            items:2
+        },
+        1100:{
+            items:5
+        }
+    }
+});
+
+$('#owl-imoveis-destaque').owlCarousel({
+    loop:false,
     margin:15,
     nav:true,
     dots:true,
