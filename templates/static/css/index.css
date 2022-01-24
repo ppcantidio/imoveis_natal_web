@@ -3,8 +3,15 @@ body {
     background-color: #f7f8f9;
 }
 
-html{
-    scroll-behavior: smooth;
+:root{
+    --orange: #ff7c00;
+    --dark-blue: #061539;
+    --light-grey: #6c757d;
+    --grey: #666666;
+    --dark-grey: #222222;
+    --white: #fff;
+    --black: #000;
+
 }
 
 button:focus {
@@ -228,7 +235,7 @@ nav.breadcrumbs ol li:first-child::before{
 
 /* header */
 
-header{
+header.main{
     position: absolute;
     left: 0;
     top: 0;
@@ -236,37 +243,37 @@ header{
     z-index: 10;
 }
 
-header .info{
+header.main .info{
     padding: 7px 0;
 }
 
-header .info a{
+header.main .info a{
     color: #fff!important;
     font-size: 13px;
     padding: 0 .6rem;
 }
 
-header .info a svg{
+header.main .info a svg{
     margin-right: 6px;
 }
 
-header .navbar{
+header.main .navbar{
     background: #061539;
     border-radius: 5px;
     padding: 5px 0px 5px 10px;
     height: 80px;
 }
 
-header .navbar-brand{
+header.main .navbar-brand{
     margin-right: 3rem;
 }
 
-header .navbar-brand img{
+header.main .navbar-brand img{
     width: 100%;
     max-height: 45px;
 }
 
-header .navbar-nav .nav-item .nav-link{
+header.main .navbar-nav .nav-item .nav-link{
     font-size: 16px;
     color: white;
     font-weight: 500;
@@ -274,24 +281,24 @@ header .navbar-nav .nav-item .nav-link{
     transition: .4s;
 }
 
-header .navbar-nav .nav-item .nav-link:hover{
+header.main .navbar-nav .nav-item .nav-link:hover{
     color: #ff9900;
 }
 
-header .nav-right-part-desktop{
+header.main .nav-right-part-desktop{
     display: flex;
     align-items: center;
 }
 
-header .nav-right-part-desktop .search-btn{
+header.main .nav-right-part-desktop .search-btn{
     margin-right: 60px;
 }
 
-header .nav-right-part-desktop .search-btn svg path{
+header.main .nav-right-part-desktop .search-btn svg path{
     fill: #fff;
 }
 
-header .nav-right-part-desktop .anunciar-btn{
+header.main .nav-right-part-desktop .anunciar-btn{
     background-color: #ff9900;
     height: 80px;
     padding: 0 50px;
@@ -301,7 +308,7 @@ header .nav-right-part-desktop .anunciar-btn{
     transition: .5s;
 }
 
-header .nav-right-part-desktop .anunciar-btn::before{
+header.main .nav-right-part-desktop .anunciar-btn::before{
     content: "";
     position: absolute;
     top: 0;
@@ -315,11 +322,11 @@ header .nav-right-part-desktop .anunciar-btn::before{
     z-index: 1;
 }
 
-header .nav-right-part-desktop .anunciar-btn:hover::before{
+header.main .nav-right-part-desktop .anunciar-btn:hover::before{
     transform: scaleX(1);
 }
 
-header .nav-right-part-desktop .anunciar-btn span{
+header.main .nav-right-part-desktop .anunciar-btn span{
     color: #061539;
     font-size: 18px;
     font-weight: 600;
@@ -327,7 +334,7 @@ header .nav-right-part-desktop .anunciar-btn span{
 }
 
 
-header .nav-right-part-desktop .anunciar-btn .btn-icon{
+header.main .nav-right-part-desktop .anunciar-btn .btn-icon{
     background: #061539;
     border-radius: 10px;
     padding: 5px;
@@ -340,7 +347,7 @@ header .nav-right-part-desktop .anunciar-btn .btn-icon{
     transition: .4s;
 }
 
-header .nav-right-part-desktop .anunciar-btn .btn-icon svg{
+header.main .nav-right-part-desktop .anunciar-btn .btn-icon svg{
     background: #ff9900;
     height: 35px;
     width: 35px;
@@ -349,20 +356,20 @@ header .nav-right-part-desktop .anunciar-btn .btn-icon svg{
     fill: #fff;
 }
 
-header .nav-right-part-desktop .anunciar-btn .btn-icon svg path{
+header.main .nav-right-part-desktop .anunciar-btn .btn-icon svg path{
     fill: #061539;
 }
 
-header.interna{
+header.main.interna{
     background: #061539;
     position: relative;
 }
 
-header.interna .navbar{
+header.main.interna .navbar{
     margin: 0 auto;
 }
 
-header.interna .info{
+header.main.interna .info{
     display: none!important;
 }
 
@@ -594,7 +601,7 @@ section.imoveis.destaque .imovel .content{
 
 section.imoveis.destaque .imovel .content .state{
     color: white;
-    background: #061e6ad9;
+    background: #061539d4   ;
     width: 60%;
     position: absolute;
     top: 0;
@@ -790,12 +797,12 @@ section.imoveis .imovel-item .content ul{
 }
 
 section.imoveis .imovel-item .content ul li{
-    margin-right: 5px;
+    margin-right: 10px;
     font-size: 13px;
 }
 
 section.imoveis .imovel-item .content ul li svg{
-    margin-right: 3px;
+    margin-right: 2px;
 }
 
 section.imoveis .imovel-item .content p.price{
@@ -972,6 +979,51 @@ section.buscar .imovel-item .header .property-tags .tag{
 
 /* IMOVEL INTERNA */
 
+header.imovel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #00000042;
+    z-index: 10;
+    opacity: 0;
+    transition: .4s;
+    pointer-events: none;
+    cursor: default;
+}
+
+header.imovel.visible{
+    opacity: 1!important;
+    pointer-events: all;
+    cursor: auto;
+}
+
+header.imovel .navbar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+header.imovel .navbar ul li a{
+    color: #444444;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 3px solid transparent;
+    transition: .4s;
+}
+
+header.imovel .navbar ul li a.active,
+header.imovel .navbar ul li a:hover{
+    border-bottom-color: #444444 ;
+}
+
 
 section.imovel .page-header{
     padding-bottom: 1rem;
@@ -1101,7 +1153,47 @@ section.imovel .sidebar .contact-bar .social-buttons a:hover{
 
 /* Footer */
 
+footer .social{
+    background-color: #061539;
+    color: #fff;
+}
 
+footer .social ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ffffff21;
+    padding: 2.5rem 0;
+    margin-bottom: 0;
+}
+
+footer .social ul li{
+    margin: 0 1.5rem;
+}
+
+footer .social ul li svg{
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+}
+
+footer .info{
+    padding: 2rem 0;
+    background-color: #061539;
+    color: #fff;
+}
+
+footer .copyright{
+    background-color: #ff9900;
+    color: #061539;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 16px;
+    font-weight: 500;
+}
 
 
 

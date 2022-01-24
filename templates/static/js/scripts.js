@@ -1,23 +1,39 @@
 
 
 // script suavizar scroll de rolagem com links de navegacao  
-$('.scrollll a[href^="#"]').on('click', function(e) {
+$('.scroll a[href^="#"]').on('click', function(e) {
     e.preventDefault();
     var id = $(this).attr('href'),
         targetOffset = $(id).offset().top;
-
     $('html, body').animate({
-        scrollTop: targetOffset
-    }, 1000);
+        scrollTop: targetOffset - 60
+    }, 600);
+    console.log(targetOffset)
 });
 
+
+console.log($( document ).height())
+console.log($( window ).height())
+
+var Bottom = $( document ).height() - $( window ).height() 
+
+console.log(Bottom)
+
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 800) {
+        $('header.imovel').addClass('visible');
+    } else {
+        $('header.imovel').removeClass('visible');
+    }
+});
+
+// Adciona classe "interna" no header das internas
 var p = window.location.pathname;
-// Adciona classe no header das internas
 if ((p !== "/index") && (p !== "/")){
-    $("header").addClass("interna");
+    $("header.main").addClass("interna");
 } 
 
-// script carregamento de pagina
+// script do preloader no carregamento de pagina
 $(window).on('load', function() {
     $('#preloader .inner').fadeOut();
     $('#preloader').delay(350).fadeOut('slow');
@@ -101,5 +117,3 @@ $('#owl-banner').owlCarousel({
     autoplayTimeout:8000,
     items:1
 });
-
-// Script para min and max range do   
