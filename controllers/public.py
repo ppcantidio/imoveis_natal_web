@@ -39,3 +39,15 @@ def login():
 @public_routes.route('/buscar', methods=['GET'])
 def buscar():
     return render_template('busca.html')
+
+@public_routes.route('/favoritos', methods=['GET'])
+def favoritos():
+    return render_template('favoritos.html')
+
+@public_routes.route('/comparar', methods=['GET'])
+def comparar():
+    return render_template('comparar.html')
+
+@public_routes.route('/contato', methods=['GET'])
+def contato():
+    return render_template('comparar.html')

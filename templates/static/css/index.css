@@ -273,16 +273,39 @@ header.main .navbar-brand img{
     max-height: 45px;
 }
 
+header.main .navbar-nav .nav-item{
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    position: relative;
+    display: flex;
+}
+
 header.main .navbar-nav .nav-item .nav-link{
     font-size: 16px;
     color: white;
     font-weight: 500;
-    padding: 0 0.8rem;
     transition: .4s;
+    padding: 4px;
 }
 
 header.main .navbar-nav .nav-item .nav-link:hover{
     color: #ff9900;
+}
+
+header.main .navbar-nav .nav-item span.qntd-selected {
+    background: orange;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #061539;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: default;
+    position: absolute;
+    right: 0;
 }
 
 header.main .nav-right-part-desktop{
